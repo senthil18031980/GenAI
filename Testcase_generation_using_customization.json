@@ -1,0 +1,53 @@
+{
+  "info": {
+    "_postman_id": "9c6831cc-343c-4f59-af41-2976f077c13c",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "36217842"
+  },
+  "item": [
+    {
+      "name": "Testcase Generation using customisation Copy",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "sk-Dkq_gvcwDp_aqs31s5wjJAL5EbbdFB9xxgNH0dsCntk",
+            "type": "text"
+          },
+          {
+            "key": "",
+            "value": "",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"output_type\": \"chat\",\r\n    \"input_type\": \"chat\",\r\n    \"input_value\": \"Generate testcases for fund transfer\",\r\n    \"tweaks\": {\r\n        \"Prompt Template-xOdQz\": {\r\n            \"template\": \"\\nONLY when the input is a valid test-case request, generate exactly 5 test cases.\\n\\nEach test case MUST include:\\n- Test Case ID\\n- Title\\n- Preconditions\\n- Steps (numbered, clear, atomic)\\n- Expected Result\\n\\nTest cases must collectively cover:\\n- Functional flow\\n- Boundary conditions\\n- Validation errors\\n- OTP / authentication (if applicable)\\n- Limit-based rules\\n- Failure / exception scenarios\\n\\nNo extra text.\\nNo headings.\\nNo explanations.\\nNo assumptions.\\n\\nT – Tone\\n\\nProfessional\\nStructured\\nPrecise\\nEnterprise QA–standard\\nNeutral and objective\\n\\n\\n{inputvariable}\\n\"\r\n        },\r\n        \"GroqModel-DghDW\": {\r\n            \"api_key\": \"Groq Variable\",\r\n            \"model_name\": \"meta-llama/llama-4-scout-17b-16e-instruct\",\r\n            \"temperature\": 0.1\r\n        }\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7860/api/v1/run/a01cdb08-565d-49d6-afec-d5eb2a3fab0b",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7860",
+          "path": [
+            "api",
+            "v1",
+            "run",
+            "a01cdb08-565d-49d6-afec-d5eb2a3fab0b"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
